@@ -4,7 +4,7 @@ title: Home
 ---
 
 <div style="display: flex; align-items: flex-start;">
-  <img src="assets/images/profile.jpg" alt="Adrij" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; margin-right: 20px;" />
+  <img src="assets/images/profile.jpg" alt="Adrij" style="margin-right: 20px;" />
   <div>
 
 # Welcome!
@@ -18,4 +18,3 @@ My research interests include labor economics, mobility, health and development,
 
   </div>
 </div>
-
