@@ -3,6 +3,10 @@ layout: default
 title: Home
 ---
 
+<div style="display: flex; align-items: flex-start;">
+  <img src="assets/images/profile.jpg" alt="Adrij" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; margin-right: 20px;" />
+  <div>
+
 # Welcome!
 
 Hi! I'm **Adrij**, a third-year PhD student in Labor Economics at the University of Luxembourg, working under the supervision of Prof. Konstantinos Tatsiramos.
@@ -11,3 +15,7 @@ My research interests include labor economics, mobility, health and development,
 
 📄 [CV](assets/Adrij_CV.pdf)  
 📚 [Research](research.md)
+
+  </div>
+</div>
+
