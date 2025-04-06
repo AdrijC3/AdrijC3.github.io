@@ -24,17 +24,11 @@
       text-decoration: underline;
     }
 
-    .top-bar {
+    .navbar {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
-      margin-bottom: 1rem;
-    }
-
-    .profile-pic {
-      width: 100px;
-      height: auto;
-      border-radius: 4px;
+      margin-bottom: 1.5rem;
     }
 
     .menu-toggle {
@@ -54,8 +48,19 @@
       display: flex;
       gap: 1rem;
       font-weight: bold;
-      justify-content: flex-end;
-      margin-bottom: 1rem;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: auto;
+      border-radius: 4px;
+      margin-right: 20px;
+    }
+
+    .page-header {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 1rem;
     }
 
     @media (max-width: 600px) {
@@ -67,7 +72,7 @@
         background-color: white;
         padding: 1rem;
         position: absolute;
-        top: 100px;
+        top: 50px;
         right: 20px;
         border: 1px solid #ccc;
         border-radius: 5px;
@@ -81,29 +86,42 @@
       .menu-toggle {
         display: flex;
       }
+
+      .page-header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .profile-pic {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="top-bar">
-    <img src="/assets/images/profile.jpg" alt="Adrij" class="profile-pic" />
+  <!-- NAVBAR -->
+  <div class="navbar">
     <div class="menu-toggle" onclick="toggleMenu()">
       <span></span>
       <span></span>
       <span></span>
     </div>
+    <div class="nav-links" id="menu">
+      <a href="/">Home</a>
+      <a href="/research.html">Research</a>
+      <a href="/assets/Adrij_CV.pdf">CV</a>
+    </div>
   </div>
 
-  <div class="nav-links" id="menu">
-    <a href="/">Home</a>
-    <a href="/research.html">Research</a>
-    <a href="/assets/Adrij_CV.pdf">CV</a>
+  <!-- MAIN CONTENT WITH IMAGE -->
+  <div class="page-header">
+    <img src="/assets/images/profile.jpg" alt="Adrij" class="profile-pic" />
+    <div>
+      {{ content }}
+    </div>
   </div>
-
-  <main>
-    {{ content }}
-  </main>
 
   <script>
     function toggleMenu() {
