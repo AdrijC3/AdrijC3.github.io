@@ -3,8 +3,6 @@ layout: default
 title: Home
 ---
 
-![Photo of Adrij](assets/images/profile.jpg)
-
 # Welcome!
 
 Hi! I'm **Adrij**, a third-year PhD student in Labor Economics at the University of Luxembourg, working under the supervision of Prof. Konstantinos Tatsiramos.
