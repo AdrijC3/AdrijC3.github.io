@@ -6,15 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
-      font-family: sans-serif;
-      margin: 2rem;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: white;
+      color: #111;
+      line-height: 1.6;
+      margin: 2rem auto;
       max-width: 800px;
+      padding: 0 1rem;
+    }
+
+    a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     .navbar {
       display: flex;
       justify-content: flex-end;
       align-items: center;
+      margin-bottom: 1.5rem;
     }
 
     .menu-toggle {
@@ -26,19 +40,30 @@
     .menu-toggle span {
       height: 3px;
       width: 25px;
-      background-color: black;
+      background-color: #0366d6;
       margin: 4px 0;
     }
 
     .nav-links {
       display: flex;
       gap: 1rem;
+      font-weight: bold;
     }
 
     @media (max-width: 600px) {
       .nav-links {
         display: none;
         flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-end;
+        background-color: white;
+        padding: 1rem;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
 
       .nav-links.active {
