@@ -3,19 +3,30 @@ layout: default
 title: Research
 ---
 
+
+---
+layout: default
+title: Research
+---
+
 # Research
-
-## Working Papers
-
-- **Title of Paper 1**, with Coauthors  
-  Abstract goes here.  
-  [PDF or SSRN link](#)
-
-- **Title of Paper 2**, solo-authored  
-  A brief description.  
-  [Link](#)
 
 ## Work in Progress
 
-- *Health Policy in Senegal* – exploring healthcare access and utilization using RD and matching  
-- *Cross-border Labor Mobility* – spatial models of sorting and welfare impacts
+<details>
+  <summary><strong>Project Title 1</strong></summary>
+
+  <p><em>with KP</em></p>
+
+  <p>This is the abstract of Project 1. You can describe what you're doing, what methods you're using, and what you're finding.</p>
+</details>
+
+<br>
+
+<details>
+  <summary><strong>Project Title 2</strong></summary>
+
+  <p><em>with MJ</em></p>
+
+  <p>This is the abstract of Project 2. You can also add preliminary findings, context, or future plans.</p>
+</details>
