@@ -26,9 +26,20 @@
 
     .navbar {
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
       align-items: center;
       margin-bottom: 1.5rem;
+    }
+
+    .site-name a {
+      text-decoration: none;
+      color: #111;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    .site-name a:hover {
+      color: #0366d6;
     }
 
     .menu-toggle {
@@ -64,7 +75,7 @@
     .page-header {
       display: flex;
       align-items: flex-start;
-      margin-top: 3rem; /* Push content down from navbar */
+      margin-top: 5rem; /* Increased spacing from top */
     }
 
     @media (max-width: 600px) {
@@ -107,6 +118,9 @@
 
   <!-- NAVBAR -->
   <div class="navbar">
+    <div class="site-name">
+      <a href="/">Adrij Chakraborty</a>
+    </div>
     <div class="menu-toggle" onclick="toggleMenu()">
       <span></span>
       <span></span>
