@@ -12,7 +12,7 @@ title: Research
 
   <p><em>with Konstantinos Tatsiramos</em></p>
 
-  <p>This is the abstract of Project 1. You can describe what you're doing, what methods you're using, and what you're finding.</p>
+  <p>Abstract Under Construction</p>
 </details>
 
 <br>
@@ -22,5 +22,5 @@ title: Research
 
   <p><em>with Michel Tenikue</em></p>
 
-  <p>This is the abstract of Project 2. You can also add preliminary findings, context, or future plans.</p>
+  <p>Abstract Under Construction</p>
 </details>
