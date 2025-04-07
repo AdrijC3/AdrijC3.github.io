@@ -15,8 +15,6 @@ title: Research
   <p>Abstract Under Construction</p>
 </details>
 
-<br>
-
 <details>
   <summary><strong>Free Access to and Utilization of Health Services in Senegal: Effects on Vulnerable Populations</strong></summary>
 

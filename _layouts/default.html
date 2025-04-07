@@ -69,7 +69,7 @@
       width: 120px;
       height: auto;
       border-radius: 4px;
-      margin-top: 32px;
+      margin-top: 34px; /* nudged image for Welcome line alignment */
     }
 
     .page-header {
@@ -91,7 +91,13 @@
       justify-content: flex-start;
     }
 
-    /* Dropdown transition */
+    /* Dropdown styling */
+    details {
+      margin-bottom: 1.2rem;
+      transition: all 0.3s ease-in-out;
+      overflow: hidden;
+    }
+
     details[open] summary ~ * {
       animation: fadeDown 0.3s ease-in;
     }
@@ -197,11 +203,28 @@
     </main>
   {% endif %}
 
+  <!-- SCRIPT: Menu toggle + Dropdown close animation -->
   <script>
     function toggleMenu() {
       const menu = document.getElementById('menu');
       menu.classList.toggle('active');
     }
+
+    // Smooth close animation for <details>
+    document.querySelectorAll("details").forEach((detail) => {
+      detail.addEventListener("toggle", () => {
+        if (!detail.open) {
+          const content = Array.from(detail.children).slice(1);
+          content.forEach((el) => {
+            el.style.opacity = 0;
+            el.style.transform = "translateY(-5px)";
+            setTimeout(() => {
+              el.removeAttribute("style");
+            }, 300);
+          });
+        }
+      });
+    });
   </script>
 
 </body>
