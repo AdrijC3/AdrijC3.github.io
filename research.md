@@ -3,7 +3,7 @@ layout: default
 title: Research
 ---
 
-# Research
+<h1 style="color: #0366d6;">Research</h1>
 
 ## Work in Progress
 
