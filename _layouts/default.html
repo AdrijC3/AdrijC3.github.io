@@ -69,7 +69,7 @@
       width: 120px;
       height: auto;
       border-radius: 4px;
-      margin-top: 32px; /* 👈 Nudges image down to align with Welcome */
+      margin-top: 32px;
     }
 
     .page-header {
@@ -89,6 +89,22 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
+    }
+
+    /* Dropdown transition */
+    details[open] summary ~ * {
+      animation: fadeDown 0.3s ease-in;
+    }
+
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-5px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @media (max-width: 600px) {
