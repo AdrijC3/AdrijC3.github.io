@@ -98,6 +98,19 @@
       overflow: hidden;
     }
 
+    details summary {
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-bottom: 0.5rem;
+    }
+
+    details p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 0.75rem;
+    }
+
     details[open] summary ~ * {
       animation: fadeDown 0.3s ease-in;
     }
@@ -105,7 +118,7 @@
     @keyframes fadeDown {
       from {
         opacity: 0;
-        transform: translateY(-5px);
+        transform: translateY(-2px);
       }
       to {
         opacity: 1;
@@ -166,6 +179,11 @@
         line-height: 1.3;
         margin-top: 1.25rem;
         margin-bottom: 0.75rem;
+      }
+
+      details summary,
+      details p {
+        font-size: 0.95rem;
       }
 
       p {
@@ -238,7 +256,7 @@
           const content = Array.from(detail.children).slice(1);
           content.forEach((el) => {
             el.style.opacity = 0;
-            el.style.transform = "translateY(-5px)";
+            el.style.transform = "translateY(-2px)";
             setTimeout(() => {
               el.removeAttribute("style");
             }, 300);
