@@ -69,13 +69,21 @@
       width: 120px;
       height: auto;
       border-radius: 4px;
-      margin-right: 20px;
     }
 
     .page-header {
       display: flex;
       align-items: flex-start;
       margin-top: 8rem;
+      gap: 1.5rem;
+    }
+
+    .profile-col {
+      flex-shrink: 0;
+    }
+
+    .text-col {
+      flex: 1;
     }
 
     @media (max-width: 600px) {
@@ -116,7 +124,6 @@
 
       .profile-pic {
         width: 160px;
-        margin-right: 0;
         margin-bottom: 1rem;
       }
 
@@ -155,8 +162,10 @@
   <!-- CONDITIONAL IMAGE FOR HOMEPAGE -->
   {% if page.title == "Home" %}
     <div class="page-header">
-      <img src="/assets/images/profile.jpg" alt="Adrij" class="profile-pic" />
-      <div>
+      <div class="profile-col">
+        <img src="/assets/images/profile.jpg" alt="Adrij" class="profile-pic" />
+      </div>
+      <div class="text-col">
         {{ content }}
       </div>
     </div>
