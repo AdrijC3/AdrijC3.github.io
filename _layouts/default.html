@@ -75,7 +75,7 @@
     .page-header {
       display: flex;
       align-items: flex-start;
-      margin-top: 5rem; /* Increased spacing from top */
+      margin-top: 8rem; /* Increased top spacing */
     }
 
     @media (max-width: 600px) {
@@ -133,13 +133,19 @@
     </div>
   </div>
 
-  <!-- MAIN CONTENT WITH IMAGE -->
-  <div class="page-header">
-    <img src="/assets/images/profile.jpg" alt="Adrij" class="profile-pic" />
-    <div>
-      {{ content }}
+  <!-- CONDITIONAL CONTENT AREA -->
+  {% if page.title == "Home" %}
+    <div class="page-header">
+      <img src="/assets/images/profile.jpg" alt="Adrij" class="profile-pic" />
+      <div>
+        {{ content }}
+      </div>
     </div>
-  </div>
+  {% else %}
+    <main>
+      {{ content }}
+    </main>
+  {% endif %}
 
   <script>
     function toggleMenu() {
