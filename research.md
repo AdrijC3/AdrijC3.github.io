@@ -3,12 +3,6 @@ layout: default
 title: Research
 ---
 
-
----
-layout: default
-title: Research
----
-
 # Research
 
 ## Work in Progress
