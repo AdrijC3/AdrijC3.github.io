@@ -63,6 +63,13 @@
 
     .nav-links a {
       color: #0366d6;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links a svg {
+      margin-right: 6px;
+      fill: #0366d6;
     }
 
     .profile-pic {
@@ -101,7 +108,6 @@
       text-align: justify;
     }
 
-    /* ✅ Animate <details> every toggle */
     @keyframes fadeDown {
       from {
         opacity: 0;
@@ -123,7 +129,6 @@
       transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
-    /* ✅ Custom summary arrow with toggle */
     summary {
       padding-left: 0;
       margin-left: 0;
@@ -150,7 +155,6 @@
       transform: rotate(0deg);
     }
 
-    /* ✅ Tutoring styles */
     .tutoring-univ {
       font-size: 0.9em;
     }
@@ -245,6 +249,10 @@
         white-space: nowrap;
         padding-left: 0.5rem;
       }
+
+      .nav-links a svg {
+        margin-right: 4px;
+      }
     }
 
     @media screen and (max-device-width: 600px) {
@@ -263,7 +271,6 @@
       }
     }
 
-    /* ✅ Fix font scaling on mobile in Desktop View */
     @media screen and (max-device-width: 800px) and (min-width: 768px) {
       body {
         font-size: 16px;
@@ -299,10 +306,25 @@
       <a href="/research.html">Research</a>
       <a href="/tutoring.html">Tutoring</a>
       <a href="/assets/Adrij_CV.pdf" target="_blank">CV</a>
+      <a href="https://www.linkedin.com/in/odd-ridge-even-0806j1995/" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18">
+          <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 
+            2.24 5 5 5h14c2.76 0 5-2.24 
+            5-5v-14c0-2.76-2.24-5-5-5zm-11 
+            19h-3v-10h3v10zm-1.5-11.28c-.97 
+            0-1.75-.79-1.75-1.75s.78-1.75 
+            1.75-1.75 1.75.79 
+            1.75 1.75-.79 1.75-1.75 
+            1.75zm13.5 11.28h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 
+            0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.89v1.36h.04c.4-.76 
+            1.38-1.56 2.84-1.56 3.04 0 3.6 
+            2 3.6 4.59v5.61z"/>
+        </svg>
+        LinkedIn
+      </a>
     </div>
   </div>
 
-  <!-- CONDITIONAL IMAGE FOR HOMEPAGE -->
   {% if page.title == "Home" %}
     <div class="page-header">
       <div class="profile-col">
@@ -318,7 +340,6 @@
     </main>
   {% endif %}
 
-  <!-- SCRIPT: Menu toggle + details animation -->
   <script>
     let autoCloseTimeout;
 
@@ -337,7 +358,6 @@
       }
     }
 
-    // Smooth animation for <details> toggle
     document.querySelectorAll("details").forEach((detail) => {
       const content = Array.from(detail.children).slice(1);
       const wrap = document.createElement("div");
@@ -350,7 +370,7 @@
         if (detail.open) {
           wrap.classList.remove("fade-out");
           wrap.classList.remove("fadeDown");
-          void wrap.offsetWidth; // force reflow
+          void wrap.offsetWidth;
           wrap.classList.add("fadeDown");
         } else {
           wrap.classList.add("fade-out");
