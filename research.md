@@ -20,5 +20,5 @@ title: Research
 
   <p><em>with Michel Tenikue</em></p>
 
-  <p>Abstract Under Construction</p>
+  <p>We examine the causal effects of gaining free healthcare at age-based eligibility thresholds on healthcare utilization and out-of-pocket expenditure. Using a regression discontinuity design around the age five and sixty cutoffs, we find limited and specification-sensitive effects on utilization, but robust and substantial impacts on expenditure—rising below age five and falling above age sixty. A pooled analysis confirms increased utilization and reduced expenditure upon eligibility. We also assess intra-household spillovers and find no effects on ineligible members’ healthcare outcomes. Overall, the results suggest that eligibility delivers more consistent gains in financial protection than in healthcare utilization.</p>
 </details>
