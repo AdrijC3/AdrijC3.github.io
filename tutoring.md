@@ -7,7 +7,7 @@ title: Tutoring
 
 ### Master Courses
 
-- **Friedrich Sschiller University Jena**  
+- **Friedrich Schiller University Jena**  
   Econometrics Refresher Course  
   <em>(as part of DAAD Integra Project)</em>
 
