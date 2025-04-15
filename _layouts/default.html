@@ -100,11 +100,7 @@
       text-align: justify;
     }
 
-    /* ✅ Animate <details> open/close */
-    details[open] .details-content {
-      animation: fadeDown 0.3s ease-in;
-    }
-
+    /* ✅ Smooth animation for every toggle */
     @keyframes fadeDown {
       from {
         opacity: 0;
@@ -116,10 +112,32 @@
       }
     }
 
+    .details-content.fadeDown {
+      animation: fadeDown 0.3s ease-in;
+    }
+
     .details-content.fade-out {
       opacity: 0;
       transform: translateY(-2px);
       transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    /* ✅ Custom summary arrow */
+    summary {
+      padding-left: 0;
+      margin-left: 0;
+      list-style: none;
+      cursor: pointer;
+    }
+
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details summary::before {
+      content: "▶ ";
+      font-size: 0.9em;
+      margin-right: 6px;
     }
 
     /* ✅ Tutoring styles */
@@ -201,7 +219,6 @@
         margin-bottom: 1rem;
       }
 
-      /* ✅ Tutoring layout fix on mobile */
       .tutoring-row {
         flex-direction: row;
         align-items: flex-start;
@@ -236,7 +253,7 @@
       }
     }
 
-    /* ✅ Fix font scaling on mobile when in Desktop View */
+    /* ✅ Desktop view on mobile font scaling fix */
     @media screen and (max-device-width: 800px) and (min-width: 768px) {
       body {
         font-size: 16px;
@@ -291,7 +308,7 @@
     </main>
   {% endif %}
 
-  <!-- SCRIPT: Menu toggle with auto-close + Dropdown animation -->
+  <!-- SCRIPT: Navbar toggle + details animation -->
   <script>
     let autoCloseTimeout;
 
@@ -310,7 +327,7 @@
       }
     }
 
-    // Smooth open/close animation for <details>
+    // Smooth animation for details toggle (every time)
     document.querySelectorAll("details").forEach((detail) => {
       const content = Array.from(detail.children).slice(1);
       const wrap = document.createElement("div");
@@ -320,7 +337,12 @@
       detail.appendChild(wrap);
 
       detail.addEventListener("toggle", () => {
-        if (!detail.open) {
+        if (detail.open) {
+          wrap.classList.remove("fade-out");
+          wrap.classList.remove("fadeDown");
+          void wrap.offsetWidth; // force reflow to retrigger animation
+          wrap.classList.add("fadeDown");
+        } else {
           wrap.classList.add("fade-out");
           setTimeout(() => {
             wrap.classList.remove("fade-out");
