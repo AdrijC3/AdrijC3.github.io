@@ -410,14 +410,17 @@
       });
     });
   
-    // ✅ Fix blank screen when navigating back
+    // ✅ Fix blank screen on back/forward navigation
     window.addEventListener("pageshow", (event) => {
-      if (event.persisted) {
-        document.querySelector(".page-transition")?.classList.add("slide-in");
+      const wrapper = document.querySelector(".page-transition");
+      if (event.persisted && wrapper) {
+        wrapper.style.opacity = "1";
+        wrapper.style.transform = "translateX(0)";
+        wrapper.classList.add("slide-in");
       }
     });
   
-    // ✅ Handle transition on link clicks
+    // ✅ Handle transition on internal link clicks
     document.querySelectorAll('a[href]').forEach(link => {
       const isInternal = link.hostname === window.location.hostname;
   
@@ -438,7 +441,7 @@
         }
       });
     });
-  </script>
+  </script>  
    
 </body>
 </html>
