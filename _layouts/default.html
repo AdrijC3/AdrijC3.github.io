@@ -189,7 +189,7 @@
       }
 
       ul, li {
-        font-size: 0.95rem; /* ✅ Matches research content */
+        font-size: 0.95rem;
         line-height: 1.5;
       }
 
@@ -197,6 +197,25 @@
         font-size: 1rem;
         line-height: 1.5;
         margin-bottom: 1rem;
+      }
+    }
+
+    /* ✅ Extra protection for "desktop mode" on mobile */
+    @media screen and (max-device-width: 600px) {
+      body {
+        font-size: 15px;
+      }
+
+      details summary,
+      details p,
+      ul, li {
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
       }
     }
   </style>
