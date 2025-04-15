@@ -365,12 +365,12 @@
 
   <script>
     let autoCloseTimeout;
-
+  
     function toggleMenu() {
       const menu = document.getElementById('menu');
       const isActive = menu.classList.contains('active');
       menu.classList.toggle('active');
-
+  
       if (!isActive) {
         clearTimeout(autoCloseTimeout);
         autoCloseTimeout = setTimeout(() => {
@@ -380,15 +380,39 @@
         clearTimeout(autoCloseTimeout);
       }
     }
-
+  
     // Page transition JS
     document.addEventListener("DOMContentLoaded", () => {
       document.querySelector(".page-transition")?.classList.add("slide-in");
+  
+      // ✅ Animate details dropdowns
+      document.querySelectorAll("details").forEach((detail) => {
+        const content = Array.from(detail.children).slice(1);
+        const wrap = document.createElement("div");
+        wrap.className = "details-content";
+  
+        content.forEach(child => wrap.appendChild(child));
+        detail.appendChild(wrap);
+  
+        detail.addEventListener("toggle", () => {
+          if (detail.open) {
+            wrap.classList.remove("fade-out");
+            wrap.classList.remove("fadeDown");
+            void wrap.offsetWidth; // Trigger reflow
+            wrap.classList.add("fadeDown");
+          } else {
+            wrap.classList.add("fade-out");
+            setTimeout(() => {
+              wrap.classList.remove("fade-out");
+            }, 300);
+          }
+        });
+      });
     });
-
+  
     document.querySelectorAll('a[href]').forEach(link => {
       const isInternal = link.hostname === window.location.hostname;
-
+  
       link.addEventListener("click", function (e) {
         if (isInternal && !link.target && !link.href.includes('#')) {
           e.preventDefault();
@@ -406,7 +430,7 @@
         }
       });
     });
-  </script>
+  </script>  
 
 </body>
 </html>
