@@ -100,7 +100,7 @@
       text-align: justify;
     }
 
-    /* ✅ Smooth animation for every toggle */
+    /* ✅ Animate <details> every toggle */
     @keyframes fadeDown {
       from {
         opacity: 0;
@@ -122,12 +122,13 @@
       transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
-    /* ✅ Custom summary arrow */
+    /* ✅ Custom summary arrow with toggle */
     summary {
       padding-left: 0;
       margin-left: 0;
       list-style: none;
       cursor: pointer;
+      display: inline-block;
     }
 
     details summary::-webkit-details-marker {
@@ -135,9 +136,17 @@
     }
 
     details summary::before {
-      content: "▶ ";
+      content: "▶";
       font-size: 0.9em;
-      margin-right: 6px;
+      display: inline-block;
+      transform: rotate(0deg);
+      transition: transform 0.2s ease;
+      margin-right: 2px;
+    }
+
+    details[open] summary::before {
+      content: "▼";
+      transform: rotate(0deg);
     }
 
     /* ✅ Tutoring styles */
@@ -253,7 +262,7 @@
       }
     }
 
-    /* ✅ Desktop view on mobile font scaling fix */
+    /* ✅ Fix font scaling on mobile in Desktop View */
     @media screen and (max-device-width: 800px) and (min-width: 768px) {
       body {
         font-size: 16px;
@@ -308,7 +317,7 @@
     </main>
   {% endif %}
 
-  <!-- SCRIPT: Navbar toggle + details animation -->
+  <!-- SCRIPT: Menu toggle + details animation -->
   <script>
     let autoCloseTimeout;
 
@@ -327,7 +336,7 @@
       }
     }
 
-    // Smooth animation for details toggle (every time)
+    // Smooth animation for <details> toggle
     document.querySelectorAll("details").forEach((detail) => {
       const content = Array.from(detail.children).slice(1);
       const wrap = document.createElement("div");
@@ -340,7 +349,7 @@
         if (detail.open) {
           wrap.classList.remove("fade-out");
           wrap.classList.remove("fadeDown");
-          void wrap.offsetWidth; // force reflow to retrigger animation
+          void wrap.offsetWidth; // force reflow
           wrap.classList.add("fadeDown");
         } else {
           wrap.classList.add("fade-out");
