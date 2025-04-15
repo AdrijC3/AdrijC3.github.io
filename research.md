@@ -12,7 +12,7 @@ title: Research
 
   <p><em>with Konstantinos Tatsiramos</em></p>
 
-  <p>Abstract Under Construction</p>
+  <p><em>Indicative Abstract</em>: This project investigates the causal effects of unemployment insurance on geographic mobility and job placement quality in Germany. It examines whether more generous benefits influence the willingness and ability of unemployed individuals to relocate for work. Using age-related discontinuities in benefit duration from policy reforms between 1987 and 2004, the study applies a local linear regression discontinuity design. It draws on rich administrative data from the Integrated Employment Biographies to track employment histories, residential mobility, and labor market outcomes. The analysis focuses on individuals aged 40–50 who became unemployed before the Hartz IV reforms to ensure institutional consistency.</p>
 </details>
 
 <details>
