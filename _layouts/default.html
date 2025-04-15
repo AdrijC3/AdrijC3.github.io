@@ -381,7 +381,7 @@
       }
     }
   
-    // Page transition JS
+    // ✅ Page transition on first load
     document.addEventListener("DOMContentLoaded", () => {
       document.querySelector(".page-transition")?.classList.add("slide-in");
   
@@ -410,6 +410,14 @@
       });
     });
   
+    // ✅ Fix blank screen when navigating back
+    window.addEventListener("pageshow", (event) => {
+      if (event.persisted) {
+        document.querySelector(".page-transition")?.classList.add("slide-in");
+      }
+    });
+  
+    // ✅ Handle transition on link clicks
     document.querySelectorAll('a[href]').forEach(link => {
       const isInternal = link.hostname === window.location.hostname;
   
@@ -430,7 +438,7 @@
         }
       });
     });
-  </script>  
-
+  </script>
+   
 </body>
 </html>
