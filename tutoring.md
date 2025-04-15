@@ -7,37 +7,37 @@ title: Tutoring
 
 ### Master Courses
 
-<div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-  <div>
+<div class="tutoring-row" style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+  <div class="tutoring-left">
     Econometrics Refresher Course<br>
     <span class="tutoring-univ">Friedrich Schiller University Jena</span><br>
     <span class="tutoring-note"><em>(as part of DAAD Integra Project)</em></span>
   </div>
-  <div style="text-align: right; white-space: nowrap;">2020–21</div>
+  <div class="tutoring-right">2020–21</div>
 </div>
 
-<div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-  <div>
+<div class="tutoring-row" style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+  <div class="tutoring-left">
     Econometrics III (Causal Inference)<br>
     <span class="tutoring-univ">University of Luxembourg</span>
   </div>
-  <div style="text-align: right; white-space: nowrap;">2023–present</div>
+  <div class="tutoring-right">2023–present</div>
 </div>
 
 ### Bachelor Courses
 
-<div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-  <div>
+<div class="tutoring-row" style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+  <div class="tutoring-left">
     Labor Economics<br>
     <span class="tutoring-univ">University of Luxembourg</span>
   </div>
-  <div style="text-align: right; white-space: nowrap;">2023–present</div>
+  <div class="tutoring-right">2023–present</div>
 </div>
 
-<div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-  <div>
+<div class="tutoring-row" style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+  <div class="tutoring-left">
     Introduction to Econometrics<br>
     <span class="tutoring-univ">University of Luxembourg</span>
   </div>
-  <div style="text-align: right; white-space: nowrap;">2023–present</div>
+  <div class="tutoring-right">2023–present</div>
 </div>

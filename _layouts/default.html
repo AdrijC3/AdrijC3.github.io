@@ -111,14 +111,6 @@
     }
 
     @media (max-width: 600px) {
-      .tutoring-univ {
-        font-size: 0.85em !important;
-      }
-
-      .tutoring-note {
-        font-size: 0.8em !important;
-      }
-
       body {
         padding: 1.5rem 1rem;
         font-size: 15px;
@@ -182,6 +174,24 @@
         font-size: 1rem;
         line-height: 1.5;
         margin-bottom: 1rem;
+      }
+
+      /* ✅ Tutoring layout fix on mobile */
+      .tutoring-row {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+
+      .tutoring-left {
+        max-width: 225px;
+        flex-shrink: 1;
+        word-wrap: break-word;
+      }
+
+      .tutoring-right {
+        text-align: right;
+        white-space: nowrap;
+        padding-left: 0.5rem;
       }
     }
 
