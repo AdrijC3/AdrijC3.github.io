@@ -92,7 +92,7 @@
       justify-content: flex-start;
     }
 
-    /* ✅ Fix dropdown font size consistency */
+    /* ✅ Dropdown font size consistency */
     details,
     details summary,
     details p {
@@ -101,29 +101,24 @@
       text-align: justify;
     }
 
-    /* Dropdown styling */
-    details {
-      margin-bottom: 1.2rem;
-      transition: all 0.3s ease-in-out;
-      overflow: hidden;
+    /* ✅ Tutoring-specific styles */
+    .tutoring-univ {
+      font-size: 0.9em;
     }
 
-    details[open] summary ~ * {
-      animation: fadeDown 0.3s ease-in;
-    }
-
-    @keyframes fadeDown {
-      from {
-        opacity: 0;
-        transform: translateY(-2px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .tutoring-note {
+      font-size: 0.85em;
     }
 
     @media (max-width: 600px) {
+      .tutoring-univ {
+        font-size: 0.85em !important;
+      }
+
+      .tutoring-note {
+        font-size: 0.8em !important;
+      }
+
       body {
         padding: 1.5rem 1rem;
         font-size: 15px;

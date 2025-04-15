@@ -7,15 +7,17 @@ title: Tutoring
 
 ### Master Courses
 
-- **Friedrich Schiller University Jena**  
-  Econometrics Refresher Course  
-  <em>(as part of DAAD Integra Project)</em>
+- Econometrics Refresher Course  
+  <span class="tutoring-univ">Friedrich Schiller University Jena</span>  
+  <span class="tutoring-note"><em>(as part of DAAD Integra Project)</em></span>
 
-- **University of Luxembourg**  
-  Econometrics III (Causal Inference)
+- Econometrics III (Causal Inference)  
+  <span class="tutoring-univ">University of Luxembourg</span>
 
 ### Bachelor Courses
 
-- **University of Luxembourg**  
-  Labor Economics  
-  Introduction to Econometrics
+- Labor Economics  
+  <span class="tutoring-univ">University of Luxembourg</span>
+
+- Introduction to Econometrics  
+  <span class="tutoring-univ">University of Luxembourg</span>
