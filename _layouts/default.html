@@ -92,7 +92,6 @@
       justify-content: flex-start;
     }
 
-    /* ✅ Dropdown font size consistency */
     details,
     details summary,
     details p {
@@ -101,13 +100,39 @@
       text-align: justify;
     }
 
-    /* ✅ Tutoring-specific styles */
+    /* ✅ Animate <details> open/close */
+    details[open] .details-content {
+      animation: fadeDown 0.3s ease-in;
+    }
+
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-2px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .details-content.fade-out {
+      opacity: 0;
+      transform: translateY(-2px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    /* ✅ Tutoring styles */
     .tutoring-univ {
       font-size: 0.9em;
     }
 
     .tutoring-note {
       font-size: 0.85em;
+    }
+
+    .research-block {
+      margin-bottom: 2rem;
     }
 
     @media (max-width: 600px) {
@@ -210,11 +235,6 @@
         line-height: 1.5;
       }
     }
-
-    /* ✅ Research project spacing */
-    .research-block {
-      margin-bottom: 2rem;
-    }
   </style>
 </head>
 <body>
@@ -253,7 +273,7 @@
     </main>
   {% endif %}
 
-  <!-- SCRIPT: Menu toggle with auto-close + Dropdown smooth close -->
+  <!-- SCRIPT: Menu toggle with auto-close + Dropdown animation -->
   <script>
     let autoCloseTimeout;
 
@@ -272,18 +292,21 @@
       }
     }
 
-    // Smooth close animation for <details>
+    // Smooth open/close animation for <details>
     document.querySelectorAll("details").forEach((detail) => {
+      const content = Array.from(detail.children).slice(1);
+      const wrap = document.createElement("div");
+      wrap.className = "details-content";
+
+      content.forEach(child => wrap.appendChild(child));
+      detail.appendChild(wrap);
+
       detail.addEventListener("toggle", () => {
         if (!detail.open) {
-          const content = Array.from(detail.children).slice(1);
-          content.forEach((el) => {
-            el.style.opacity = 0;
-            el.style.transform = "translateY(-2px)";
-            setTimeout(() => {
-              el.removeAttribute("style");
-            }, 300);
-          });
+          wrap.classList.add("fade-out");
+          setTimeout(() => {
+            wrap.classList.remove("fade-out");
+          }, 300);
         }
       });
     });
