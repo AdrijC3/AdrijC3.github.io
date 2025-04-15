@@ -91,25 +91,20 @@
       justify-content: flex-start;
     }
 
+    /* ✅ Fix dropdown font size consistency */
+    details,
+    details summary,
+    details p {
+      font-size: 0.95rem !important;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
     /* Dropdown styling */
     details {
       margin-bottom: 1.2rem;
       transition: all 0.3s ease-in-out;
       overflow: hidden;
-    }
-
-    details summary {
-      font-size: 0.95rem !important;
-      font-weight: 600;
-      cursor: pointer;
-      margin-bottom: 0.5rem;
-    }
-
-    details p {
-      font-size: 0.95rem !important;
-      line-height: 1.5;
-      margin-bottom: 0.75rem;
-      text-align: justify;
     }
 
     details[open] summary ~ * {
@@ -182,12 +177,6 @@
         margin-bottom: 0.75rem;
       }
 
-      details summary,
-      details p {
-        font-size: 0.95rem !important;
-        text-align: justify;
-      }
-
       ul, li {
         font-size: 0.95rem;
         line-height: 1.5;
@@ -205,10 +194,8 @@
         font-size: 15px;
       }
 
-      details summary,
-      details p,
       ul, li {
-        font-size: 0.95rem !important;
+        font-size: 0.95rem;
         line-height: 1.5;
       }
 
