@@ -109,7 +109,7 @@
       font-size: 1rem;
       line-height: 1.5;
       margin-bottom: 0.75rem;
-      text-align: justify; /* Justified paragraph text */
+      text-align: justify;
     }
 
     details[open] summary ~ * {
@@ -185,7 +185,12 @@
       details summary,
       details p {
         font-size: 0.95rem;
-        text-align: justify; /* Mobile justification too */
+        text-align: justify;
+      }
+
+      ul, li {
+        font-size: 0.95rem; /* ✅ Matches research content */
+        line-height: 1.5;
       }
 
       p {
@@ -245,7 +250,7 @@
         clearTimeout(autoCloseTimeout);
         autoCloseTimeout = setTimeout(() => {
           menu.classList.remove('active');
-        }, 5000); // auto-close in 5 seconds
+        }, 5000);
       } else {
         clearTimeout(autoCloseTimeout);
       }
