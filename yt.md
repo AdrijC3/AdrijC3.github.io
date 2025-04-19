@@ -17,5 +17,3 @@ permalink: /youtube.html
     <iframe src="https://www.youtube.com/embed/GAD36fBbVIQ" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
-
-git push origin main
