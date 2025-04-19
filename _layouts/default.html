@@ -102,7 +102,6 @@
       text-align: justify;
     }
 
-    /* ✅ Page transition animation */
     .page-transition {
       opacity: 0;
       transform: translateX(50px);
@@ -114,7 +113,6 @@
       transform: translateX(0);
     }
 
-    /* ✅ Step 3: YouTube video grid */
     .video-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -345,7 +343,6 @@
       <a href="/">Home</a>
       <a href="/research.html">Research</a>
       <a href="/tutoring.html">Tutoring</a>
-      <a href="/youtube.html">YouTube</a> <!-- ✅ Step 1 -->
       <a href="/assets/Adrij_CV.pdf" target="_blank">CV</a>
 
       <!-- FDEF Department Link -->
@@ -367,6 +364,13 @@
             0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.89v1.36h.04c.4-.76 
             1.38-1.56 2.84-1.56 3.04 0 3.6 
             2 3.6 4.59v5.61z"/>
+        </svg>
+      </a>
+
+      <!-- YouTube Icon -->
+      <a href="/youtube.html" title="YouTube">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+          <path d="M23.498 6.186a2.958 2.958 0 00-2.081-2.093C19.67 3.6 12 3.6 12 3.6s-7.67 0-9.417.493A2.958 2.958 0 00.502 6.186 30.228 30.228 0 000 12a30.228 30.228 0 00.502 5.814 2.958 2.958 0 002.081 2.093C4.33 20.4 12 20.4 12 20.4s7.67 0 9.417-.493a2.958 2.958 0 002.081-2.093A30.228 30.228 0 0024 12a30.228 30.228 0 00-.502-5.814zM9.6 15.6V8.4l6 3.6-6 3.6z" fill="#0366d6"/>
         </svg>
       </a>
     </div>
@@ -407,11 +411,9 @@
       }
     }
 
-    // ✅ Page transition on first load
     document.addEventListener("DOMContentLoaded", () => {
       document.querySelector(".page-transition")?.classList.add("slide-in");
 
-      // ✅ Animate details dropdowns
       document.querySelectorAll("details").forEach((detail) => {
         const content = Array.from(detail.children).slice(1);
         const wrap = document.createElement("div");
@@ -424,7 +426,7 @@
           if (detail.open) {
             wrap.classList.remove("fade-out");
             wrap.classList.remove("fadeDown");
-            void wrap.offsetWidth; // Trigger reflow
+            void wrap.offsetWidth;
             wrap.classList.add("fadeDown");
           } else {
             wrap.classList.add("fade-out");
@@ -436,7 +438,6 @@
       });
     });
 
-    // ✅ Fix blank screen on back/forward navigation
     window.addEventListener("pageshow", (event) => {
       const wrapper = document.querySelector(".page-transition");
       if (event.persisted && wrapper) {
@@ -446,7 +447,6 @@
       }
     });
 
-    // ✅ Handle transition on internal link clicks
     document.querySelectorAll('a[href]').forEach(link => {
       const isInternal = link.hostname === window.location.hostname;
 
@@ -468,5 +468,6 @@
       });
     });
   </script>
+
 </body>
 </html>
