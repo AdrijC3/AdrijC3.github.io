@@ -5,17 +5,7 @@ title: Research
 
 <h1 style="color: #0366d6;">Research</h1>
 
-## Work in Progress
-
-<div class="research-block">
-  <details>
-    <summary><strong>Unemployment Insurance and Geographic Mobility: Evidence from the German UI System</strong></summary>
-
-    <p><em>with Konstantinos Tatsiramos</em></p>
-
-    <p><em>Indicative Abstract</em>: This project investigates the causal effects of unemployment insurance on geographic mobility and job placement quality in Germany. It examines whether more generous benefits influence the willingness and ability of unemployed individuals to relocate for work. Using age-related discontinuities in benefit duration from policy reforms between 1987 and 2004, the study applies a local linear regression discontinuity design. It draws on rich administrative data from the Integrated Employment Biographies to track employment histories, residential mobility, and labor market outcomes. The analysis focuses on individuals aged 40–50 who became unemployed before the Hartz IV reforms to ensure institutional consistency.</p>
-  </details>
-</div>
+## Working Papers
 
 <div class="research-block">
   <details>
@@ -23,6 +13,18 @@ title: Research
 
     <p><em>with Michel Tenikue</em></p>
 
-    <p>We examine the causal effects of gaining free healthcare at age-based eligibility thresholds on healthcare utilization and out-of-pocket expenditure in Senegal. Using a regression discontinuity design around the age five and sixty cutoffs, we find limited and specification-sensitive effects on utilization, but robust and substantial impacts on expenditure—rising above age five and falling above age sixty. A pooled analysis confirms increased utilization and reduced expenditure upon eligibility. We also assess intra-household spillovers and find no effects on ineligible members’ healthcare outcomes. Overall, the results suggest that eligibility delivers more consistent gains in financial protection than in healthcare utilization.</p>
+    <p>This paper estimates the causal effects of healthcare user-fee exemptions for vulnerable populations in Senegal, exploiting two sharp age-based eligibility thresholds under the country's Universal Health Coverage program: children under five and seniors aged sixty and older. Using nationally representative household survey data and a regression discontinuity design, we find that the symmetric policy architecture produces strikingly asymmetric impacts. For children, losing eligibility raises the cost of care for families without reducing their use of formal healthcare. The exemption functions as a financial shield rather than a driver of access. For seniors, gaining eligibility produces no detectable change in either utilization or out-of-pocket expenditure. The contrast between the two programs points to differences in awareness, rather than statutory design. Heterogeneity analysis confirms that both findings hold broadly across gender, poverty status, and geographic access to facilities.</p>
+
+    <p><em>Presented at: CSAE Conference 2026, University of Oxford.</em></p>
+  </details>
+</div>
+
+<div class="research-block">
+  <details>
+    <summary><strong>Unemployment Insurance Duration and the Dynamics of Reemployment Quality: Evidence from Germany</strong></summary>
+
+    <p><em>with Felix Stips and Konstantinos Tatsiramos</em></p>
+
+    <p>This paper studies how extended potential benefit duration (PBD) in unemployment insurance reshapes reemployment quality in Germany. We exploit four sharp age-based discontinuities in PBD across two policy regimes (1987–1999 and 1999–2004), using population-level administrative data from the Integrated Employment Biographies. Rather than estimating only average wage effects, we trace how the impact of extended PBD on wage-loss probability varies with the duration of the preceding nonemployment spell. This distributional approach separates the two forces whose balance the literature has not resolved. Workers who exit nonemployment under extended coverage are less likely to suffer wage losses and form more durable matches, consistent with a selectivity effect. Workers who exhaust their benefits before finding work face sharply elevated wage-loss rates and enter matches that dissolve faster over time, consistent with duration dependence. The sign reversal occurs precisely at the control group's exhaustion window, providing direct evidence that both forces coexist within the same institutional setting. We find no effect on geographic mobility, ruling out spatial search expansion as a mechanism. Extended PBD significantly reduces recall to the pre-layoff employer, with the effect concentrated among workers who would otherwise return within the first three months. New matches form within the same local labor market but with different employers, indicating that the relevant margin of adjustment is job mobility rather than geography.</p>
   </details>
 </div>
