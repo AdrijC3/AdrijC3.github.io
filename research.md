@@ -5,7 +5,7 @@ title: Research
 
 <h1 style="color: #0366d6;">Research</h1>
 
-## Working Papers
+## Work in Progress
 
 <div class="research-block">
   <details>
