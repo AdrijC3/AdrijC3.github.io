@@ -9,7 +9,7 @@ title: Research
 
 <div class="research-block">
   <details>
-    <summary><strong>Free Access to and Utilization of Health Services in Senegal: Effects on Vulnerable Populations</strong></summary>
+    <summary><strong>Free Access, Uneven Impact: Healthcare Fee Exemptions for the Vulnerable in Senegal</strong></summary>
 
     <p><em>with Michel Tenikue</em></p>
 
